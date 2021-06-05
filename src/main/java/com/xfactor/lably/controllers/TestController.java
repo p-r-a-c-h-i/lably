@@ -3,12 +3,7 @@ package com.xfactor.lably.controllers;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.List;
-
 import com.xfactor.lably.entity.Lab;
-import com.xfactor.lably.entity.Tests;
-import com.xfactor.lably.entity.Admin;
-import com.xfactor.lably.entity.Customer;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -50,8 +45,8 @@ public class TestController {
     }
 
     @GetMapping("/hello4")
-    public ArrayList helloName4(@RequestParam String name, @RequestParam String age) {
-        ArrayList arrayList = new ArrayList<>();
+    public ArrayList<String> helloName4(@RequestParam String name, @RequestParam String age) {
+        ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add(name);
         arrayList.add(age);
         return arrayList;
